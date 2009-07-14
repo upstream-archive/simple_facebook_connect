@@ -1,0 +1,15 @@
+<fb:login-button onclick="redirect_to_authenticate()"></fb:login-button>
+<%= javascript_include_tag 'http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php' %>
+<script type="text/javascript" charset="utf-8">
+ function redirect_to_authenticate() {
+   FB.Facebook.get_sessionState().waitUntilReady(function() {
+     window.location = window.facebook_authenticate_location;
+   });
+ };
+
+ window.api_key = "<%= SimpleFacebookConnect.api_key %>";
+ window.facebook_authenticate_location = '<%= fb_authenticate_path %>';
+ window.xd_receiver = '/xd_receiver.html';
+
+ FB.init(window.api_key, window.xd_receiver);
+</script>

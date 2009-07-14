@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auth_getSession_response
+  xmlns="http://api.facebook.com/1.0/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://api.facebook.com/1.0/ http://api.facebook.com/1.0/facebook.xsd">
+    <session_key>5f34e11bfb97c762e439e6a5-8055</session_key>
+    <uid>8055</uid>
+    <expires>1173309298</expires>
+</auth_getSession_response>
