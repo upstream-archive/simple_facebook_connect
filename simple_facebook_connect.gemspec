@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{simple_facebook_connect}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Alexander Lang", "Frank Prößdorf"]
-  s.date = %q{2009-07-14}
+  s.authors = ["Alexander Lang", "Frank Pr\303\266\303\237dorf"]
+  s.date = %q{2009-07-15}
   s.email = %q{alex@upstream-berlin.com}
   s.extra_rdoc_files = [
     "README.md"
@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
      "MIT-LICENSE",
      "README.md",
      "Rakefile",
+     "VERSION",
      "app/controllers/simple_facebook_connect/connect_controller.rb",
      "app/views/shared/_facebook_connect_button.html.erb",
      "config/simple_facebook_connect_routes.rb",
@@ -37,6 +38,7 @@ Gem::Specification.new do |s|
      "lib/simple_facebook_connect/user.rb",
      "lib/simple_facebook_connect/user_extension.rb",
      "rails/init.rb",
+     "simple_facebook_connect.gemspec",
      "spec/fixtures/facebook.auth.getSession/default.xml",
      "spec/fixtures/facebook.users.getInfo/default.xml",
      "spec/lib/simple_facebook_connect/parser_spec.rb",
