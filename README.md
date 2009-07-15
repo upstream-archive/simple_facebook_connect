@@ -21,7 +21,7 @@ When an existing user of your site clicks the button he will also be able to log
 
 For basic application setup see the [facebook developer documentation](http://developers.facebook.com/get_started.php).
 
-Set the "Canvas Callback URL" and the "Connect URL" to "http://your.server.com/fb/connect". Write down the API and secret key for later.
+Set the "Canvas Callback URL" to "http://your.server.com/fb/connect" and the "Connect URL" to "http://your.server.com". Write down the API and secret key for later.
 
 
 ## Installation
