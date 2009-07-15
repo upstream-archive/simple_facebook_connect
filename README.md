@@ -89,6 +89,22 @@ This will generate a feature, step definitions and fixtures to test the facebook
 
 Finally: run the features and by now everything should be green. Congrats.
 
+## What else
+
+You can grab some of the facebook profile data (e.g. name, location, picture) when signing up your new users. For a complete list of attributes see `SimpleFacebookConnect::User::FIELDS`. In order to do that you could add a line of code to your signup action:
+
+    class UsersController < ApplicationController
+      def create
+        @user = # initialize user
+        ....
+        if facebook_user
+          @user.name = facebook_user.name
+          @user.about_me = facebook_user.about_me
+        end
+        @user.save
+      end
+    end
+
 ## Links
 
 * facebooker: http://facebooker.rubyforge.org/
