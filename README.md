@@ -17,6 +17,13 @@ With this plugin you will add the well know facebook connect button to your site
 
 When an existing user of your site clicks the button he will also be able to log in via facebook, given the email address he signed up with at your site is also known to facebook.
 
+## Set up a facebook application
+
+For basic application setup see the [facebook developer documentation](http://developers.facebook.com/get_started.php).
+
+Set the "Canvas Callback URL" and the "Connect URL" to "http://your.server.com/fb/connect". Write down the API and secret key for later.
+
+
 ## Installation
 
 This plugin assumes you have a `User` model with an `email` attribute. It will add some extensions to your `User` model and controllers in order to provide the necessary hooks and calls for facebook to authenticate your users.
@@ -36,7 +43,9 @@ Run the migration generator and migrate:
     rake db:migrate
     rake db:test:clone
     
-Add the facebook connect button to your sign up and/or sign in pages. We have prepared a partial for you:
+In the meantime we have created a _RAILS_ROOT/config/simple_facebook_connect.yml_ file in which you should enter your facebook API and secret keys.
+    
+After that add the facebook connect button to your sign up and/or sign in pages. We have prepared a partial for you:
 
     <%= render :partial => 'shared/facebook_connect_button' %>
     

@@ -2,7 +2,7 @@ module SimpleFacebookConnect
   
   class User
 
-    FIELDS = [:uid, :hometown_location, :first_name, :last_name, :current_location, :pic, :locale, :email_hashes]
+    FIELDS = [:uid, :hometown_location, :first_name, :last_name, :current_location, :pic, :locale, :email_hashes, :about_me, :interests]
     attr_reader(*FIELDS)
   
     def initialize(uid, session)
