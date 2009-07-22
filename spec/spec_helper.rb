@@ -1,8 +1,7 @@
 __DIR__ = File.dirname __FILE__
-$LOAD_PATH << __DIR__ + '/../lib'
+$LOAD_PATH.unshift __DIR__ + '/../lib'
 
 require 'simple_facebook_connect'
-
 require 'fileutils'
 require 'rubygems'
 Gem::RubyGemsVersion.inspect # without this the activerecord gem doesn't load on ruby 1.9 #WTF
