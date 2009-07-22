@@ -2,6 +2,8 @@ require 'rexml/document'
 
 module SimpleFacebookConnect
   
+  class FacebookApiError < StandardError; end
+  
   class Parser
     
     module REXMLElementExtensions
@@ -141,7 +143,7 @@ module SimpleFacebookConnect
         response_element = element('error_response', data) rescue nil
         if response_element
           hash = hashinate(response_element)
-          raise StandardError, hash['error_msg']
+          raise FacebookApiError, hash['error_msg']
         end
       end
     end

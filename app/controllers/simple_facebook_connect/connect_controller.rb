@@ -15,7 +15,7 @@ module SimpleFacebookConnect
         else
           render(:nothing => true)
         end
-      rescue StandardError => e
+      rescue FacebookApiError => e
         Rails.logger.warn e.message
         redirect_to fb_authenticate_path
       end

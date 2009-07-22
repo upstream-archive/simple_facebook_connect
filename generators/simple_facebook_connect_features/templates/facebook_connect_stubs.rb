@@ -4,8 +4,7 @@ module SimpleFacebookConnect
       if File.exists?(fixture_path(method, 'default'))
         File.read fixture_path(method, 'default')
       else
-        e.message << "\nFacebook API Reference: http://wiki.developers.facebook.com/index.php/#{method.sub(/^facebook\./, '')}#Example_Return_XML"
-        raise e
+        raise "Missing fixture #{fixture_path(method, 'default')}\nFacebook API Reference: http://wiki.developers.facebook.com/index.php/#{method.sub(/^facebook\./, '')}#Example_Return_XML"
       end
     end
 
