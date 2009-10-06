@@ -28,3 +28,5 @@ require __DIR__ + '/../generators/simple_facebook_connect_migration/templates/mi
 
 CreateUsers.up
 AddFacebookConnect.up
+
+ActiveRecord::Base.send(:include, SimpleFacebookConnect::ActiveRecordExtension)

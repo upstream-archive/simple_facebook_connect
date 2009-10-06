@@ -29,7 +29,7 @@ config = YAML::load(File.read(config_file))[Rails.env]
 SimpleFacebookConnect.api_key = config['api_key']
 SimpleFacebookConnect.secret_key = config['secret_key']
 
-ApplicationController.send(:include, SimpleFacebookConnect::ControllerExtension)
-User.send(:include, SimpleFacebookConnect::UserExtension)
+ActionController::Base.send(:include, SimpleFacebookConnect::ControllerExtension)
+ActiveRecord::Base.send(:include, SimpleFacebookConnect::ActiveRecordExtension)
 
 require 'simple_facebook_connect/extensions/routes'

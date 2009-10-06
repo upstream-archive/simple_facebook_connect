@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../../spec_helper'
 
 describe SimpleFacebookConnect::UserExtension, 'email=' do
   class User < ActiveRecord::Base
-    include SimpleFacebookConnect::UserExtension
+    facebook_user
     
   end
   

@@ -81,6 +81,14 @@ Provide a `log_in(user)` method, either in your `ApplicationController` or by su
       end
     end
     
+Make your `User` model Facebook aware:
+
+    class User
+      facebook_user
+      
+      ...
+    end
+    
 Optional step (well, you really should do this): Generate Cucumber Features:
 
     script/generate simple_facebook_connect_features
