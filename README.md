@@ -30,12 +30,12 @@ This plugin assumes you have a `User` model with an `email` attribute. It will a
 
 Install the gem:
 
-    sudo gem install upstream-simple_facebook_connect
+    sudo gem install simple_facebook_connect --source=http://gemcutter.org
     
 Add it as a dependency to your Rails application:
 
     # environment.rb
-    gem 'upstream-simple_facebook_connect', :source => 'http://gems.github.com'
+    gem 'simple_facebook_connect', :source => 'http://gemcutter.org'
     
 Run the migration generator and migrate:
 
