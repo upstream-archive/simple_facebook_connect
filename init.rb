@@ -30,6 +30,6 @@ SimpleFacebookConnect.api_key = config['api_key']
 SimpleFacebookConnect.secret_key = config['secret_key']
 
 ActionController::Base.send(:include, SimpleFacebookConnect::ControllerExtension)
-ActiveRecord::Base.send(:include, SimpleFacebookConnect::ActiveRecordExtension)
+ActiveRecord::Base.send(:include, SimpleFacebookConnect::ActiveRecordExtension) if defined?(ActiveRecord)
 
 require 'simple_facebook_connect/extensions/routes'
